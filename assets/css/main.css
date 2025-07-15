@@ -4121,7 +4121,7 @@ input[type="tel"]::placeholder {
 
 @media (max-width: 600px) {
   #logo span {
-    display: none;
+    display: none !important;
   }
   #logo img {
     margin-left: 0 !important;
