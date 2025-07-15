@@ -264,7 +264,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
-	<script>
+<script>
   var form = document.getElementById("my-form");
   if (form) {
     async function handleSubmit(event) {
@@ -279,8 +279,9 @@
         }
       }).then(response => {
         if (response.ok) {
-          status.innerHTML = "Dziękujemy za zgłoszenie! Skontaktujemy się z Tobą wkrótce.";
-          form.reset()
+          // После успешной отправки редиректим на thanks.html
+          window.location.href = "https://mojprond.pl/thanks.html";
+          return;
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
@@ -297,6 +298,7 @@
     form.addEventListener("submit", handleSubmit)
   }
 </script>
+
 
 
 </body>
