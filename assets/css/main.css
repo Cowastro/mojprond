@@ -4118,3 +4118,13 @@ input[type="tel"]::placeholder {
   color: #b2b2b2 !important;
   opacity: 1;
 }
+
+@media (max-width: 600px) {
+  #logo span {
+    display: none;
+  }
+  #logo img {
+    margin-left: 0 !important;
+  }
+}
+
